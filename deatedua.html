@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Dea 💌</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .letter {
+      background: #fff;
+      border: 4px dashed pink;
+      padding: 40px;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+      position: relative;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(-45deg);
+      top: -10px;
+      left: -10px;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    h1 {
+      color: #ff69b4;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    p {
+      color: #333;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .hearts-floating {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .floating-heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(-45deg);
+      animation: float 5s infinite ease-in;
+    }
+
+    .floating-heart::before,
+    .floating-heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .floating-heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .floating-heart::after {
+      top: 0;
+      left: 10px;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(-45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts-floating">
+    <div class="floating-heart" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="floating-heart" style="left: 30%; animation-delay: 1s;"></div>
+    <div class="floating-heart" style="left: 50%; animation-delay: 2s;"></div>
+    <div class="floating-heart" style="left: 70%; animation-delay: 3s;"></div>
+    <div class="floating-heart" style="left: 90%; animation-delay: 4s;"></div>
+  </div>
+  <div class="letter">
+    <div class="heart"></div>
+    <h1>Dea 💖</h1>
+    <p>
+      Mfal për çdo gjë që kam bërë gabim.<br>
+      You're enough — dhe gjithmonë ke qenë.<br>
+      Më vjen keq që e kuptova shumë vonë.
+    </p>
+  </div>
+</body>
+</html>
